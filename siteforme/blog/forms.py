@@ -6,3 +6,15 @@ class CommentForm(forms.ModelForm):
         model=Comment
         fields=('name', 'email', 'body')
 
+class LoginForm(forms.Form):
+    username=forms.CharField(widget=forms.TextInput(attrs={
+        "id":"inputLogin",
+        "class": "form-control",
+        "placeholder": "user123",
+    }))
+    password=forms.CharField(widget=forms.PasswordInput(attrs={
+        "type": "password",
+        "id":"inputPassword",
+        "class":"form-control",
+    "placeholder":"1234568",
+    }))
